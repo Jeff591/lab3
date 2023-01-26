@@ -36,11 +36,19 @@ public class ArrayExamples {
     for(double num: arr) {
       if(num < lowest) { lowest = num; }
     }
+
+    double count = 0;
+    for (double num: arr)
+    {
+      if(num == lowest) { count++;}
+    }
+
     double sum = 0;
     for(double num: arr) {
       if(num != lowest) { sum += num; }
     }
-    return sum / (arr.length - 1);
+    //Does not account for multiple lowest;
+    return sum / (arr.length - count);
   }
 
 
