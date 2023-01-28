@@ -10,9 +10,12 @@ class ListExamples {
   // the same order they appeared in the input list;
   static List<String> filter(List<String> list, StringChecker sc) {
     List<String> result = new ArrayList<>();
+    int index = 0;
     for(String s: list) {
       if(sc.checkString(s)) {
-        result.add(0, s);
+        //FIX: it is always adding at the front instead of the back
+        result.add(index, s);
+        index++;
       }
     }
     return result;
@@ -40,7 +43,8 @@ class ListExamples {
     }
     while(index2 < list2.size()) {
       result.add(list2.get(index2));
-      index1 += 1;
+      //FIX: index1 should be index2
+      index2 += 1;
     }
     return result;
   }
