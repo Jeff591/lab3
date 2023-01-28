@@ -20,6 +20,19 @@ public class ListTests{
     }
 
     @Test
+    public void testFilter2()
+    {
+        List<String> input = new ArrayList<String>();
+        input.add("apple");
+        input.add("orange");
+        StringChecker check = new StringChecker1("app");
+        List<String> expected = new ArrayList<String>();
+        expected.add("apple");
+        assertEquals(expected, ListExamples.filter(input, check));
+    }
+
+
+    @Test
     public void testMerge()
     {
         List<String> input = new ArrayList<String>();

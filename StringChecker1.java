@@ -1,5 +1,4 @@
 
-
 public class StringChecker1 implements StringChecker
 {
     String check;
